@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+       TASK
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,23 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
-
+ 
+<!--incorporamos el boton acceder con la funcion animacion el cual al presionar 
+produce un evento click
+tambien tenemos la clase square que tiene sus propiedadades y caracteriticas en el css -->
   <div id="container">
-    <strong>Ready to create an app?</strong>
+    <ion-button color="success" (click)="ngAfterViewInit"  expand="round">
+      <ion-icon slot="on" name="icon-only"></ion-icon>
+           
+  
+      <div #square class="square"> </div>
+      <ion-label>{{data.usuario}}</ion-label>
+    </ion-button>
+   
+    
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 </ion-content>
